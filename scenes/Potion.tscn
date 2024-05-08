@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkwb2q4ulckba"]
+
+[ext_resource type="Texture2D" uid="uid://j3ltwhyqk3qn" path="res://sprites/potion_health.png" id="1_qe4kh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pfwbg"]
+radius = 7.52034
+
+[node name="Potion" type="StaticBody2D"]
+texture_filter = 1
+scale = Vector2(3, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qe4kh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_pfwbg")
