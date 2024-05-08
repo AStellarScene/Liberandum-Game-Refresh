@@ -50,3 +50,8 @@ func _on_hitbox_area_entered(area):
 	if area.is_in_group("collect"):
 		collect = collect + 1
 		label_collect.text = str(collect) + "/20"
+
+
+func _on_hit_box_area_entered(area):
+	if area.is_in_group("potion"):
+		print("Potion")

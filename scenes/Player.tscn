@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bx73ibhulbk5t"]
+[gd_scene load_steps=13 format=3 uid="uid://bx73ibhulbk5t"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_1hwyr"]
 [ext_resource type="Texture2D" uid="uid://cys2j8utfysim" path="res://sprites/player_back.png" id="2_5xt3g"]
@@ -60,6 +60,9 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_weknw"]
 height = 37.3333
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_62c26"]
+size = Vector2(23.3333, 41)
+
 [node name="Player" type="CharacterBody2D"]
 texture_filter = 1
 scale = Vector2(3, 3)
@@ -67,7 +70,7 @@ script = ExtResource("1_1hwyr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_n3knj")
-animation = &"face_back"
+animation = &"front"
 autoplay = "front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -77,3 +80,11 @@ shape = SubResource("CapsuleShape2D_weknw")
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
+
+[node name="HitBox" type="Area2D" parent="." groups=["player"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(4.76837e-07, -0.166667)
+shape = SubResource("RectangleShape2D_62c26")
+
+[connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]
