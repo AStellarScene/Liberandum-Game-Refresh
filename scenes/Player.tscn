@@ -29,7 +29,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_u84qg")
 }],
 "loop": true,
-"name": &"back",
+"name": &"face_back",
 "speed": 5.0
 }, {
 "frames": [{
@@ -67,7 +67,8 @@ script = ExtResource("1_1hwyr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_n3knj")
-animation = &"back"
+animation = &"face_back"
+autoplay = "front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_weknw")

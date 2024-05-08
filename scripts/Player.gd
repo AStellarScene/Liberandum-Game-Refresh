@@ -3,15 +3,36 @@ extends CharacterBody2D
 @onready var label_lives = $"Label-Lives"
 @onready var timer = $Hitbox/Timer
 @onready var label_collect = $"Label-Collect"
+@onready var animated_sprite_2d = $AnimatedSprite2D
 
 var lives = 8
 var collect = 0
 var hurt = false
 
+
+
+
+
+
+
 func _physics_process(delta):
+	var isLeft = velocity.x < 0
+	var isRight = velocity.x > 0
+	var isUp = velocity.y < 0
+	var isDown = velocity.y > 0
+	
 	var direction = Input.get_vector("ui_left","ui_right","ui_up","ui_down")
 	velocity = direction * 250
 	move_and_slide()
+	
+	if isLeft:
+		animated_sprite_2d.animation = "face_left"
+	if isRight:
+		animated_sprite_2d.animation = "face_right"
+	if isUp:
+		animated_sprite_2d.animation = "face_back"
+	if isDown:
+		animated_sprite_2d.animation = "front"
 
 func _on_hitbox_area_entered(area):
 	if area.is_in_group("hurt"):
