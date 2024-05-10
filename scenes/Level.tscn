@@ -8,9 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://g43udpfj01lf" path="res://sprites/floor_outside.png" id="6_b0grr"]
 [ext_resource type="Texture2D" uid="uid://b36q6ynmbtwye" path="res://sprites/floor_w_bump.png" id="7_g0w6x"]
 [ext_resource type="PackedScene" uid="uid://bx73ibhulbk5t" path="res://scenes/Player.tscn" id="8_egnj3"]
-[ext_resource type="Texture2D" uid="uid://j3ltwhyqk3qn" path="res://sprites/potion_health.png" id="9_una3b"]
 [ext_resource type="PackedScene" uid="uid://dkwb2q4ulckba" path="res://scenes/Potion.tscn" id="9_w6mhe"]
 [ext_resource type="PackedScene" uid="uid://buraga7xut0me" path="res://scenes/Enemy.tscn" id="11_lgfei"]
+[ext_resource type="PackedScene" uid="uid://6nud76ym8io8" path="res://scenes/heartcontainer.tscn" id="11_tvj41"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v4gtq"]
 texture = ExtResource("1_6om6q")
@@ -80,36 +80,14 @@ position = Vector2(187.333, 99)
 [node name="Potion" parent="." instance=ExtResource("9_w6mhe")]
 position = Vector2(376, 517)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="PotionHealth" type="Sprite2D" parent="CanvasLayer"]
-texture_filter = 1
-position = Vector2(50, 600)
-scale = Vector2(3, 3)
-texture = ExtResource("9_una3b")
-
-[node name="PotionHealth2" type="Sprite2D" parent="CanvasLayer"]
-texture_filter = 1
-position = Vector2(90, 600)
-scale = Vector2(3, 3)
-texture = ExtResource("9_una3b")
-
-[node name="PotionHealth3" type="Sprite2D" parent="CanvasLayer"]
-texture_filter = 1
-position = Vector2(130, 600)
-scale = Vector2(3, 3)
-texture = ExtResource("9_una3b")
-
-[node name="Label" type="Label" parent="CanvasLayer"]
-offset_left = 68.0
-offset_top = 539.0
-offset_right = 108.0
-offset_bottom = 562.0
-text = "Lives"
-
 [node name="Enemy" parent="." node_paths=PackedStringArray("endPoint") instance=ExtResource("11_lgfei")]
 position = Vector2(608, 184)
 endPoint = NodePath("Marker2D")
 
 [node name="Marker2D" type="Marker2D" parent="Enemy"]
 position = Vector2(-2.03451e-05, 66.6667)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" parent="CanvasLayer" instance=ExtResource("11_tvj41")]
+scale = Vector2(1.5, 1.5)

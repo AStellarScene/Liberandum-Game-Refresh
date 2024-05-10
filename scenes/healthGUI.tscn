@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://glhpchr7dhj3"]
+
+[ext_resource type="Texture2D" uid="uid://j3ltwhyqk3qn" path="res://sprites/potion_health.png" id="1_c6gxe"]
+
+[node name="heartGUI" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(24, 32)
+offset_right = 24.0
+offset_bottom = 32.0
+scale = Vector2(1.5, 1.505)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-4, 0)
+scale = Vector2(2, 1.994)
+texture = ExtResource("1_c6gxe")
+centered = false

@@ -3,7 +3,9 @@ extends CharacterBody2D
 @onready var timer = $HitBox/Timer
 @onready var animated_sprite_2d = $AnimatedSprite2D
 
-var lives = 3
+@export var maxHealth = 3
+@onready var currentHealth: int = maxHealth
+
 var collect = 0
 var hurt = false
 
@@ -28,8 +30,8 @@ func _physics_process(delta):
 
 func _on_hitbox_area_entered(area):
 	if area.is_in_group("hurt"):
-		print("Hurt!")
-		if lives > 0:
+		currentHealth -= 1
+		if currentHealth > 0:
 			timer.start()
 			hurt = true
 		else:
