@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed = 50
+@export var speed = 100
 @export var limit = 0.5
 @export var endPoint: Marker2D
 

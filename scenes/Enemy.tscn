@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://buraga7xut0me"]
+[gd_scene load_steps=9 format=3 uid="uid://buraga7xut0me"]
 
 [ext_resource type="Texture2D" uid="uid://cya1x4rx56rme" path="res://sprites/enemy.png" id="1_qfgx0"]
 [ext_resource type="Script" path="res://scripts/Enemy.gd" id="1_u0mae"]
@@ -84,6 +84,10 @@ animations = [{
 radius = 9.0
 height = 23.3333
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4f0s2"]
+radius = 10.3333
+height = 26.6667
+
 [node name="Enemy" type="CharacterBody2D"]
 z_index = 1
 texture_filter = 1
@@ -97,3 +101,8 @@ speed_scale = 2.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_cuelb")
+
+[node name="Hurt Box" type="Area2D" parent="." groups=["enemy"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurt Box"]
+shape = SubResource("CapsuleShape2D_4f0s2")

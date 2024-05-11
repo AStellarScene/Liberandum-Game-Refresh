@@ -88,11 +88,11 @@ endPoint = NodePath("Marker2D")
 [node name="Marker2D" type="Marker2D" parent="Enemy"]
 position = Vector2(-2.03451e-05, 66.6667)
 
+[node name="NPC" parent="." instance=ExtResource("12_obgrf")]
+position = Vector2(176, 656)
+scale = Vector2(3, 3)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HBoxContainer" parent="CanvasLayer" instance=ExtResource("11_tvj41")]
 scale = Vector2(1.5, 1.5)
-
-[node name="NPC" parent="." instance=ExtResource("12_obgrf")]
-position = Vector2(176, 656)
-scale = Vector2(3, 3)

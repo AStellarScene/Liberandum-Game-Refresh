@@ -43,3 +43,5 @@ func _on_hitbox_area_entered(area):
 func _on_hit_box_area_entered(area):
 	if area.is_in_group("potion"):
 		print("Potion")
+	if area.is_in_group("enemy"):
+		print("Hurt")
