@@ -103,35 +103,35 @@ position = Vector2(976, 320)
 endPoint = NodePath("Marker2D")
 
 [node name="Marker2D" type="Marker2D" parent="Enemy"]
-position = Vector2(-2.03451e-05, 66.6667)
+position = Vector2(-4.72937e-11, 138)
 
 [node name="Enemy4" parent="." node_paths=PackedStringArray("endPoint") instance=ExtResource("11_lgfei")]
 position = Vector2(1888, 992)
-endPoint = NodePath("../Enemy/Marker2D")
+endPoint = NodePath("Marker2D")
 
 [node name="Marker2D" type="Marker2D" parent="Enemy4"]
-position = Vector2(-1.66665, 223)
+position = Vector2(-52.3333, -123.333)
 
 [node name="Enemy5" parent="." node_paths=PackedStringArray("endPoint") instance=ExtResource("11_lgfei")]
 position = Vector2(320, 1368)
-endPoint = NodePath("../Enemy/Marker2D")
+endPoint = NodePath("Marker2D")
 
 [node name="Marker2D" type="Marker2D" parent="Enemy5"]
-position = Vector2(-2.03451e-05, 66.6667)
+position = Vector2(3, 127.667)
 
 [node name="Enemy2" parent="." node_paths=PackedStringArray("endPoint") instance=ExtResource("11_lgfei")]
 position = Vector2(1832, -64)
-endPoint = NodePath("../Enemy/Marker2D")
+endPoint = NodePath("Marker2D")
 
 [node name="Marker2D" type="Marker2D" parent="Enemy2"]
-position = Vector2(-2.03451e-05, 66.6667)
+position = Vector2(-0.99998, 150.667)
 
 [node name="Enemy3" parent="." node_paths=PackedStringArray("endPoint") instance=ExtResource("11_lgfei")]
 position = Vector2(-248, 808)
-endPoint = NodePath("../Enemy/Marker2D")
+endPoint = NodePath("Marker2D")
 
 [node name="Marker2D" type="Marker2D" parent="Enemy3"]
-position = Vector2(-2.03451e-05, 66.6667)
+position = Vector2(103, 81.6667)
 
 [node name="NPC" parent="." instance=ExtResource("12_obgrf")]
 position = Vector2(184, 736)
@@ -161,7 +161,7 @@ position = Vector2(-216, -320)
 scale = Vector2(3, 3)
 
 [node name="Marker2D" type="Marker2D" parent="EnemySlime4"]
-position = Vector2(-136, 0)
+position = Vector2(628, 320.667)
 
 [node name="EnemySlime2" parent="." instance=ExtResource("15_7yrfw")]
 position = Vector2(1152, 1544)
