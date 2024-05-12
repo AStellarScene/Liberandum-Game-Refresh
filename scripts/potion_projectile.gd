@@ -16,5 +16,6 @@ func _physics_process(delta):
 
 func _on_body_entered(body):
 	if body.has_method("take_damage"):
+		$AudioStreamPlayer2D.play()
 		queue_free()
 		body.take_damage()

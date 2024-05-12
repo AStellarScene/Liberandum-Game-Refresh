@@ -22,6 +22,7 @@ func updateVelocity():
 	var moveDirection = (endPosition - position)
 	if moveDirection.length() < limit:
 		changeDirection()
+		$AudioStreamPlayer2D.play()
 		
 	velocity = moveDirection.normalized() * speed
 

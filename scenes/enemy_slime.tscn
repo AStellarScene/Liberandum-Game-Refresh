@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://b8hjdg6nwhrq4"]
+[gd_scene load_steps=23 format=3 uid="uid://b8hjdg6nwhrq4"]
 
 [ext_resource type="Script" path="res://scripts/EnemySlime.gd" id="1_7ffhu"]
 [ext_resource type="Texture2D" uid="uid://cylr7erleq2ky" path="res://sprites/enemy_slime_flip.png" id="2_3c55m"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://c7litp3eshm1a" path="res://sprites/enemy_slime5_flip.png" id="15_6tkjs"]
 [ext_resource type="Texture2D" uid="uid://dbvoxujxqomx1" path="res://sprites/enemy_slime6_flip.png" id="16_cuh8v"]
 [ext_resource type="Texture2D" uid="uid://k5fj82su4n0n" path="res://sprites/enemy_slime7_flip.png" id="17_yoj8k"]
+[ext_resource type="AudioStream" uid="uid://vccw42hwf2h" path="res://sfx/random (4).wav" id="18_yctt3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_frqvp"]
 animations = [{
@@ -158,7 +159,7 @@ radius = 8.0
 height = 16.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6ml8p"]
-radius = 78.0064
+radius = 56.358
 
 [node name="EnemySlime" type="CharacterBody2D"]
 scale = Vector2(3, 3)
@@ -182,6 +183,9 @@ collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Detect Box"]
 shape = SubResource("CircleShape2D_6ml8p")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("18_yctt3")
 
 [connection signal="area_entered" from="Detect Box" to="." method="_on_detect_box_area_entered"]
 [connection signal="area_exited" from="Detect Box" to="." method="_on_detect_box_area_exited"]
