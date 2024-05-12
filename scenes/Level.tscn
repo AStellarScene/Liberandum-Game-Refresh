@@ -151,7 +151,7 @@ grow_vertical = 0
 
 [node name="EnemySlime" parent="." node_paths=PackedStringArray("endPoint") instance=ExtResource("15_7yrfw")]
 position = Vector2(1576, -424)
-scale = Vector2(3, 3)
+scale = Vector2(3.5, 3.5)
 endPoint = NodePath("Marker2D")
 
 [node name="Marker2D" type="Marker2D" parent="EnemySlime"]
@@ -159,7 +159,7 @@ position = Vector2(-136, 0)
 
 [node name="EnemySlime4" parent="." node_paths=PackedStringArray("endPoint") instance=ExtResource("15_7yrfw")]
 position = Vector2(-216, -320)
-scale = Vector2(3, 3)
+scale = Vector2(3.5, 3.5)
 endPoint = NodePath("../EnemySlime/Marker2D")
 
 [node name="Marker2D" type="Marker2D" parent="EnemySlime4"]
@@ -167,7 +167,7 @@ position = Vector2(-136, 0)
 
 [node name="EnemySlime2" parent="." node_paths=PackedStringArray("endPoint") instance=ExtResource("15_7yrfw")]
 position = Vector2(1152, 1544)
-scale = Vector2(3, 3)
+scale = Vector2(3.5, 3.5)
 endPoint = NodePath("../EnemySlime/Marker2D")
 
 [node name="Marker2D" type="Marker2D" parent="EnemySlime2"]
@@ -175,7 +175,7 @@ position = Vector2(152, 0)
 
 [node name="EnemySlime5" parent="." node_paths=PackedStringArray("endPoint") instance=ExtResource("15_7yrfw")]
 position = Vector2(176, -72)
-scale = Vector2(3, 3)
+scale = Vector2(3.5, 3.5)
 endPoint = NodePath("../EnemySlime/Marker2D")
 
 [node name="Marker2D" type="Marker2D" parent="EnemySlime5"]
@@ -183,7 +183,7 @@ position = Vector2(152, 0)
 
 [node name="EnemySlime6" parent="." node_paths=PackedStringArray("endPoint") instance=ExtResource("15_7yrfw")]
 position = Vector2(-624, 288)
-scale = Vector2(3, 3)
+scale = Vector2(3.5, 3.5)
 endPoint = NodePath("../EnemySlime/Marker2D")
 
 [node name="Marker2D" type="Marker2D" parent="EnemySlime6"]
@@ -191,7 +191,7 @@ position = Vector2(128, 0)
 
 [node name="EnemySlime3" parent="." node_paths=PackedStringArray("endPoint") instance=ExtResource("15_7yrfw")]
 position = Vector2(-576, 1480)
-scale = Vector2(3, 3)
+scale = Vector2(3.5, 3.5)
 endPoint = NodePath("../EnemySlime/Marker2D")
 
 [node name="Marker2D" type="Marker2D" parent="EnemySlime3"]
