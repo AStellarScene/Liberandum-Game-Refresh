@@ -103,7 +103,7 @@ position = Vector2(976, 320)
 endPoint = NodePath("Marker2D")
 
 [node name="Marker2D" type="Marker2D" parent="Enemy"]
-position = Vector2(-4.72937e-11, 138)
+position = Vector2(138.333, 127.333)
 
 [node name="Enemy4" parent="." node_paths=PackedStringArray("endPoint") instance=ExtResource("11_lgfei")]
 position = Vector2(1888, 992)
@@ -151,42 +151,36 @@ grow_vertical = 0
 
 [node name="EnemySlime" parent="." instance=ExtResource("15_7yrfw")]
 position = Vector2(1576, -424)
-scale = Vector2(3, 3)
 
 [node name="Marker2D" type="Marker2D" parent="EnemySlime"]
 position = Vector2(-136, 0)
 
 [node name="EnemySlime4" parent="." instance=ExtResource("15_7yrfw")]
 position = Vector2(-216, -320)
-scale = Vector2(3, 3)
 
 [node name="Marker2D" type="Marker2D" parent="EnemySlime4"]
 position = Vector2(628, 320.667)
 
 [node name="EnemySlime2" parent="." instance=ExtResource("15_7yrfw")]
 position = Vector2(1152, 1544)
-scale = Vector2(3, 3)
 
 [node name="Marker2D" type="Marker2D" parent="EnemySlime2"]
 position = Vector2(152, 0)
 
 [node name="EnemySlime5" parent="." instance=ExtResource("15_7yrfw")]
 position = Vector2(176, -72)
-scale = Vector2(3, 3)
 
 [node name="Marker2D" type="Marker2D" parent="EnemySlime5"]
 position = Vector2(152, 0)
 
 [node name="EnemySlime6" parent="." instance=ExtResource("15_7yrfw")]
 position = Vector2(-624, 288)
-scale = Vector2(3, 3)
 
 [node name="Marker2D" type="Marker2D" parent="EnemySlime6"]
 position = Vector2(128, 0)
 
 [node name="EnemySlime3" parent="." instance=ExtResource("15_7yrfw")]
 position = Vector2(-576, 1480)
-scale = Vector2(3, 3)
 
 [node name="Marker2D" type="Marker2D" parent="EnemySlime3"]
 position = Vector2(101.333, 0)
@@ -236,3 +230,24 @@ position = Vector2(2062, 1721)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("17_k3mse")
 autoplay = true
+
+[node name="EnemySlime7" parent="." instance=ExtResource("15_7yrfw")]
+position = Vector2(1905, 1570)
+
+[node name="EnemySlime8" parent="." instance=ExtResource("15_7yrfw")]
+position = Vector2(1671, 1283)
+
+[node name="EnemySlime9" parent="." instance=ExtResource("15_7yrfw")]
+position = Vector2(665, 354)
+
+[node name="EnemySlime10" parent="." instance=ExtResource("15_7yrfw")]
+position = Vector2(659, -488)
+
+[node name="EnemySlime11" parent="." instance=ExtResource("15_7yrfw")]
+position = Vector2(-639, -485)
+
+[node name="EnemySlime12" parent="." instance=ExtResource("15_7yrfw")]
+position = Vector2(-624, 788)
+
+[node name="EnemySlime13" parent="." instance=ExtResource("15_7yrfw")]
+position = Vector2(149, 1298)
