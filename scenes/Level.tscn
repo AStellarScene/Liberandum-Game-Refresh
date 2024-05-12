@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bs6tluxxt23p"]
+[gd_scene load_steps=26 format=3 uid="uid://bs6tluxxt23p"]
 
 [ext_resource type="Texture2D" uid="uid://bgn40ouy5rkp1" path="res://sprites/wall_straight.png" id="1_6om6q"]
 [ext_resource type="Script" path="res://scripts/Level.gd" id="1_m42ro"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://bevmufe5lkjwb" path="res://scenes/npc.tscn" id="12_obgrf"]
 [ext_resource type="PackedScene" uid="uid://b8hjdg6nwhrq4" path="res://scenes/enemy_slime.tscn" id="15_7yrfw"]
 [ext_resource type="PackedScene" uid="uid://ba31wfhgdntru" path="res://scenes/potion_grab.tscn" id="17_e12yb"]
+[ext_resource type="PackedScene" uid="uid://dkwb2q4ulckba" path="res://scenes/health_grab.tscn" id="17_uwlpo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v4gtq"]
 texture = ExtResource("1_6om6q")
@@ -105,7 +106,7 @@ endPoint = NodePath("../Enemy/Marker2D")
 position = Vector2(-2.03451e-05, 66.6667)
 
 [node name="NPC" parent="." instance=ExtResource("12_obgrf")]
-position = Vector2(144, 736)
+position = Vector2(184, 736)
 scale = Vector2(3, 3)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -154,3 +155,42 @@ position = Vector2(101.333, 0)
 
 [node name="Collect Potion" parent="." instance=ExtResource("17_e12yb")]
 position = Vector2(214, 742)
+
+[node name="Collect Potion2" parent="." instance=ExtResource("17_e12yb")]
+position = Vector2(-399, 1677)
+
+[node name="Collect Potion3" parent="." instance=ExtResource("17_e12yb")]
+position = Vector2(-389, 942)
+
+[node name="Collect Potion4" parent="." instance=ExtResource("17_e12yb")]
+position = Vector2(-544, 372)
+
+[node name="Collect Potion5" parent="." instance=ExtResource("17_e12yb")]
+position = Vector2(-630, -204)
+
+[node name="Collect Potion6" parent="." instance=ExtResource("17_e12yb")]
+position = Vector2(401, -372)
+
+[node name="Collect Potion7" parent="." instance=ExtResource("17_e12yb")]
+position = Vector2(1580, 333)
+
+[node name="Collect Potion8" parent="." instance=ExtResource("17_e12yb")]
+position = Vector2(1776, 1101)
+
+[node name="Collect Potion9" parent="." instance=ExtResource("17_e12yb")]
+position = Vector2(219, 1538)
+
+[node name="Collect Potion10" parent="." instance=ExtResource("17_e12yb")]
+position = Vector2(308, 1134)
+
+[node name="Collect Health" parent="." instance=ExtResource("17_uwlpo")]
+position = Vector2(-259, 1364)
+
+[node name="Collect Health2" parent="." instance=ExtResource("17_uwlpo")]
+position = Vector2(-332, 177)
+
+[node name="Collect Health3" parent="." instance=ExtResource("17_uwlpo")]
+position = Vector2(1737, 736)
+
+[node name="Collect Health4" parent="." instance=ExtResource("17_uwlpo")]
+position = Vector2(2062, 1721)
