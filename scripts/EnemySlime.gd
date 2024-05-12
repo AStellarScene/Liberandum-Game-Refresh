@@ -1,41 +1,27 @@
 extends CharacterBody2D
 
-@export var speed = 100
-@export var limit = 0.5
-@export var endPoint: Marker2D
+@onready var player = $"../Player"
 
-@onready var animations = $AnimatedSprite2D
+var track = false
 
-var startPosition
-var endPosition
-
-func _ready():
-	startPosition = position
-	endPosition = endPoint.global_position
-	
-func changeDirection():
-	var tempEnd = endPosition
-	endPosition = startPosition
-	startPosition = tempEnd
-	
-func updateVelocity():
-	var moveDirection = (endPosition - position)
-	if moveDirection.length() < limit:
-		changeDirection()
-		
-	velocity = moveDirection.normalized() * speed
-
-func updateAnimation():
-	var animationString = "walkup"
-	if velocity.y > 0:
-		animationString = "walkdown"
-		
-	animations.play(animationString)
-	
 func _physics_process(delta):
-	updateVelocity()
-	move_and_slide()
-	updateAnimation()
+	if track == true:
+		var direction = global_position.direction_to(player.global_position)
+		velocity = direction * 130
+		move_and_slide()
+
+
+func _on_hit_box_area_entered(area):
+	if track == true:
+		queue_free()
+
+
+func _on_detect_box_area_entered(area):
+	track = true
+
+
+func _on_detect_box_area_exited(area):
+	track = false
 
 func take_damage():
 	print("Damage")

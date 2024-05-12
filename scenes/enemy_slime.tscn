@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b8hjdg6nwhrq4"]
+[gd_scene load_steps=22 format=3 uid="uid://b8hjdg6nwhrq4"]
 
 [ext_resource type="Script" path="res://scripts/EnemySlime.gd" id="1_7ffhu"]
 [ext_resource type="Texture2D" uid="uid://cylr7erleq2ky" path="res://sprites/enemy_slime_flip.png" id="2_3c55m"]
@@ -157,6 +157,9 @@ height = 16.0
 radius = 10.3333
 height = 26.6667
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_6ml8p"]
+radius = 78.0064
+
 [node name="EnemySlime" type="CharacterBody2D"]
 script = ExtResource("1_7ffhu")
 
@@ -172,3 +175,12 @@ shape = SubResource("CapsuleShape2D_twck1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurt Box"]
 shape = SubResource("CapsuleShape2D_i2ou7")
+
+[node name="Detect Box" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detect Box"]
+shape = SubResource("CircleShape2D_6ml8p")
+
+[connection signal="area_entered" from="Detect Box" to="." method="_on_detect_box_area_entered"]
+[connection signal="area_exited" from="Detect Box" to="." method="_on_detect_box_area_exited"]
