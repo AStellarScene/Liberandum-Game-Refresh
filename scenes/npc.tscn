@@ -19,12 +19,13 @@ shape = SubResource("CapsuleShape2D_5hvnr")
 
 [node name="Label" type="Label" parent="."]
 texture_filter = 1
-offset_left = -40.3334
-offset_top = -40.0
-offset_right = 40.6666
-offset_bottom = -17.0
+offset_left = -52.0
+offset_top = -56.6892
+offset_right = 50.0
+offset_bottom = -20.6892
 theme_override_fonts/font = ExtResource("2_hcov2")
 theme_override_font_sizes/font_size = 9
-text = "Take this 
-it will help you"
+text = "Dispatch the evil
+with this potion.
+Press Q to throw it."
 horizontal_alignment = 1

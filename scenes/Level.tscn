@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bs6tluxxt23p"]
+[gd_scene load_steps=25 format=3 uid="uid://bs6tluxxt23p"]
 
 [ext_resource type="Texture2D" uid="uid://bgn40ouy5rkp1" path="res://sprites/wall_straight.png" id="1_6om6q"]
 [ext_resource type="Script" path="res://scripts/Level.gd" id="1_m42ro"]
@@ -14,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://6nud76ym8io8" path="res://scenes/heartcontainer.tscn" id="11_tvj41"]
 [ext_resource type="PackedScene" uid="uid://bevmufe5lkjwb" path="res://scenes/npc.tscn" id="12_obgrf"]
 [ext_resource type="PackedScene" uid="uid://b8hjdg6nwhrq4" path="res://scenes/enemy_slime.tscn" id="15_7yrfw"]
-[ext_resource type="PackedScene" uid="uid://dkwb2q4ulckba" path="res://scenes/health_grab.tscn" id="16_muoo1"]
 [ext_resource type="PackedScene" uid="uid://ba31wfhgdntru" path="res://scenes/potion_grab.tscn" id="17_e12yb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v4gtq"]
@@ -153,8 +152,5 @@ endPoint = NodePath("../EnemySlime/Marker2D")
 [node name="Marker2D" type="Marker2D" parent="EnemySlime3"]
 position = Vector2(101.333, 0)
 
-[node name="Collect Health" parent="." instance=ExtResource("16_muoo1")]
-position = Vector2(323, 746)
-
 [node name="Collect Potion" parent="." instance=ExtResource("17_e12yb")]
-position = Vector2(430, 730)
+position = Vector2(214, 742)
