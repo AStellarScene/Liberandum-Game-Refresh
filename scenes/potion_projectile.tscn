@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://drw31830lf64d"]
+
+[ext_resource type="Script" path="res://scripts/potion_projectile.gd" id="1_4su5l"]
+[ext_resource type="Texture2D" uid="uid://cu3p1tnmpf5vc" path="res://sprites/potion_throw.png" id="2_8py07"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7pr2t"]
+radius = 6.66667
+
+[node name="PotionProjectile" type="Area2D"]
+script = ExtResource("1_4su5l")
+
+[node name="PotionThrow" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_8py07")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_7pr2t")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

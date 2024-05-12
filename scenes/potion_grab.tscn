@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dkwb2q4ulckba"]
+[gd_scene load_steps=5 format=3 uid="uid://ba31wfhgdntru"]
 
-[ext_resource type="Texture2D" uid="uid://j3ltwhyqk3qn" path="res://sprites/potion_health.png" id="1_qe4kh"]
-[ext_resource type="Script" path="res://scripts/Potion.gd" id="1_tcxj5"]
+[ext_resource type="Script" path="res://scripts/Potion.gd" id="1_vw15b"]
+[ext_resource type="Texture2D" uid="uid://cu3p1tnmpf5vc" path="res://sprites/potion_throw.png" id="2_55u31"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pfwbg"]
 radius = 7.52034
@@ -9,18 +9,18 @@ radius = 7.52034
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_66g87"]
 size = Vector2(15.3333, 16.3333)
 
-[node name="Potion" type="StaticBody2D"]
+[node name="Collect Potion" type="StaticBody2D"]
 texture_filter = 1
 scale = Vector2(3, 3)
-script = ExtResource("1_tcxj5")
+script = ExtResource("1_vw15b")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_qe4kh")
+texture = ExtResource("2_55u31")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_pfwbg")
 
-[node name="CollectBox" type="Area2D" parent="." groups=["potion"]]
+[node name="CollectBox" type="Area2D" parent="." groups=["throwing"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollectBox"]
 position = Vector2(2.38419e-07, 0.166667)

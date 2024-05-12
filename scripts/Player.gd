@@ -2,7 +2,11 @@ extends CharacterBody2D
 
 @onready var timer = $HitBox/Timer
 @onready var animated_sprite_2d = $AnimatedSprite2D
+@onready var throwing_point = $ThrowingPoint
+@onready var potion_holding = $PotionHolding
 
+
+@onready var holdingPotion = false
 @export var maxHealth = 3
 @onready var currentHealth: int = maxHealth
 
@@ -29,16 +33,31 @@ func _physics_process(delta):
 		animated_sprite_2d.animation = "face_back"
 	if isDown:
 		animated_sprite_2d.animation = "front"
+		
+func throw():
+	const POTION = preload("res://scenes/potion_projectile.tscn")
+	var new_potion = POTION.instantiate()
+	self.add_child(new_potion)
+	
+func _input(event):
+	if event.is_action_pressed("throw"):
+		if holdingPotion == true:
+			throw()
+			holdingPotion = false
+			potion_holding.hide()
 
 func _on_hit_box_area_entered(area):
-	if area.is_in_group("potion"):
+	if area.is_in_group("health"):
 		if currentHealth < 3:
 			currentHealth += 1
 		changedHealth.emit()
 		print(currentHealth)
 	if area.is_in_group("enemy"):
-		
 		if currentHealth > 0:
 			currentHealth -= 1
 		changedHealth.emit()
 		print(currentHealth)
+	if area.is_in_group("throwing"):
+		potion_holding.show()
+		print("Grabbed")
+		holdingPotion = true

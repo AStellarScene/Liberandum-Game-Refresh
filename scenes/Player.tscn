@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://bx73ibhulbk5t"]
+[gd_scene load_steps=14 format=3 uid="uid://bx73ibhulbk5t"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_1hwyr"]
 [ext_resource type="Texture2D" uid="uid://cys2j8utfysim" path="res://sprites/player_back.png" id="2_5xt3g"]
 [ext_resource type="Texture2D" uid="uid://dobui73sanjqv" path="res://sprites/player_lookleft.png" id="3_ahvyn"]
 [ext_resource type="Texture2D" uid="uid://dff72w7c0uhlo" path="res://sprites/player_lookright.png" id="4_l7pma"]
 [ext_resource type="Texture2D" uid="uid://d0rg5g2182ohs" path="res://sprites/player_front.png" id="5_b1otw"]
+[ext_resource type="Texture2D" uid="uid://cu3p1tnmpf5vc" path="res://sprites/potion_throw.png" id="6_aev4t"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u84qg"]
 atlas = ExtResource("2_5xt3g")
@@ -86,5 +87,13 @@ position = Vector2(4.76837e-07, -0.166667)
 shape = SubResource("RectangleShape2D_62c26")
 
 [node name="Timer" type="Timer" parent="HitBox"]
+
+[node name="ThrowingPoint" type="Marker2D" parent="."]
+position = Vector2(7.66667, 0)
+
+[node name="PotionHolding" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(13.3333, -1)
+texture = ExtResource("6_aev4t")
 
 [connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]

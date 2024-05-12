@@ -36,3 +36,7 @@ func _physics_process(delta):
 	updateVelocity()
 	move_and_slide()
 	updateAnimation()
+	
+func take_damage():
+	print("Damage")
+	queue_free()
