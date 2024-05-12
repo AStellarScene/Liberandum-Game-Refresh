@@ -1,13 +1,14 @@
-[gd_scene load_steps=21 format=3 uid="uid://bs6tluxxt23p"]
+[gd_scene load_steps=22 format=3 uid="uid://bs6tluxxt23p"]
 
 [ext_resource type="Texture2D" uid="uid://bgn40ouy5rkp1" path="res://sprites/wall_straight.png" id="1_6om6q"]
+[ext_resource type="Script" path="res://scripts/Level.gd" id="1_m42ro"]
 [ext_resource type="Texture2D" uid="uid://dio8m3bcsugfp" path="res://sprites/wall_straight_turned.png" id="2_7xktv"]
 [ext_resource type="Texture2D" uid="uid://1dl5olgx0640" path="res://sprites/wall_top.png" id="3_gvx4d"]
 [ext_resource type="Texture2D" uid="uid://d25wigqcvk0dm" path="res://sprites/wall_top_turned.png" id="4_kqftp"]
 [ext_resource type="Texture2D" uid="uid://bru037wih5a37" path="res://sprites/floor.png" id="5_hu4yc"]
 [ext_resource type="Texture2D" uid="uid://g43udpfj01lf" path="res://sprites/floor_outside.png" id="6_b0grr"]
 [ext_resource type="Texture2D" uid="uid://b36q6ynmbtwye" path="res://sprites/floor_w_bump.png" id="7_g0w6x"]
-[ext_resource type="PackedScene" uid="uid://bx73ibhulbk5t" path="res://scenes/Player.tscn" id="8_egnj3"]
+[ext_resource type="PackedScene" uid="uid://bx73ibhulbk5t" path="res://scenes/player.tscn" id="8_egnj3"]
 [ext_resource type="PackedScene" uid="uid://dkwb2q4ulckba" path="res://scenes/Potion.tscn" id="9_w6mhe"]
 [ext_resource type="PackedScene" uid="uid://buraga7xut0me" path="res://scenes/Enemy.tscn" id="11_lgfei"]
 [ext_resource type="PackedScene" uid="uid://6nud76ym8io8" path="res://scenes/heartcontainer.tscn" id="11_tvj41"]
@@ -68,6 +69,7 @@ sources/6 = SubResource("TileSetAtlasSource_0kfnr")
 
 [node name="Level" type="Node2D"]
 texture_filter = 1
+script = ExtResource("1_m42ro")
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(4, 4)
@@ -94,5 +96,12 @@ scale = Vector2(3, 3)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="HBoxContainer" parent="CanvasLayer" instance=ExtResource("11_tvj41")]
-scale = Vector2(1.5, 1.5)
+[node name="HeartContainer" parent="CanvasLayer" instance=ExtResource("11_tvj41")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = -32.0
+offset_right = 156.0
+offset_bottom = 0.0
+grow_vertical = 0

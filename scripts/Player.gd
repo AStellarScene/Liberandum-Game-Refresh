@@ -6,6 +6,8 @@ extends CharacterBody2D
 @export var maxHealth = 3
 @onready var currentHealth: int = maxHealth
 
+signal changedHealth
+
 var collect = 0
 var hurt = false
 
@@ -28,20 +30,12 @@ func _physics_process(delta):
 	if isDown:
 		animated_sprite_2d.animation = "front"
 
-func _on_hitbox_area_entered(area):
-	if area.is_in_group("hurt"):
-		currentHealth -= 1
-		if currentHealth > 0:
-			timer.start()
-			hurt = true
-		else:
-			position = Vector2(0, 0)
-			get_tree().reload_current_scene()
-	if area.is_in_group("collect"):
-		collect = collect + 1
-
 func _on_hit_box_area_entered(area):
 	if area.is_in_group("potion"):
-		print("Potion")
+		print(currentHealth)
+		currentHealth += 1
+		changedHealth.emit()
 	if area.is_in_group("enemy"):
-		print("Hurt")
+		print(currentHealth)
+		currentHealth -= 1
+		changedHealth.emit()

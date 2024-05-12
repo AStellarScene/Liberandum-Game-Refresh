@@ -1,14 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://6nud76ym8io8"]
+[gd_scene load_steps=4 format=3 uid="uid://6nud76ym8io8"]
 
+[ext_resource type="Script" path="res://scripts/heartcontainer.gd" id="1_7i4ev"]
 [ext_resource type="FontFile" uid="uid://dqed0ibyd0ph" path="res://sprites/font/Perfect DOS VGA 437.ttf" id="1_ysmgd"]
 [ext_resource type="PackedScene" uid="uid://glhpchr7dhj3" path="res://scenes/healthGUI.tscn" id="2_rv7ec"]
 
-[node name="HBoxContainer" type="HBoxContainer"]
+[node name="HeartContainer" type="HBoxContainer"]
 offset_left = 8.0
 offset_top = 8.0
 offset_right = 164.0
 offset_bottom = 40.0
 theme_override_constants/separation = 10
+script = ExtResource("1_7i4ev")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
