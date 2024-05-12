@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://b8hjdg6nwhrq4" path="res://scenes/enemy_slime.tscn" id="15_7yrfw"]
 [ext_resource type="PackedScene" uid="uid://ba31wfhgdntru" path="res://scenes/potion_grab.tscn" id="17_e12yb"]
 [ext_resource type="AudioStream" uid="uid://g516ksgod4i4" path="res://music/level.mp3" id="17_k3mse"]
-[ext_resource type="PackedScene" uid="uid://dkwb2q4ulckba" path="res://scenes/health_grab.tscn" id="17_uwlpo"]
+[ext_resource type="PackedScene" uid="uid://dkwb2q4ulckba" path="res://scenes/Potion.tscn" id="17_uwlpo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v4gtq"]
 texture = ExtResource("1_6om6q")
