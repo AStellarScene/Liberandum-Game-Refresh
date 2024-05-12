@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bdr5tq0qhpgc2"]
+[gd_scene load_steps=5 format=3 uid="uid://bdr5tq0qhpgc2"]
 
 [ext_resource type="Script" path="res://scripts/story.gd" id="1_vl5dv"]
 [ext_resource type="Texture2D" uid="uid://bvob6ci6mxy4a" path="res://sprites/start_menu_blur.png" id="2_yxbhl"]
 [ext_resource type="FontFile" uid="uid://dqed0ibyd0ph" path="res://sprites/font/Perfect DOS VGA 437.ttf" id="3_wfb0s"]
+[ext_resource type="AudioStream" uid="uid://dhx07jumnb72e" path="res://music/story.mp3" id="4_thvva"]
 
 [node name="story" type="Node2D"]
 script = ExtResource("1_vl5dv")
@@ -43,5 +44,9 @@ It is his duty as a knight to his kingdom to fight through
 the dungeon and save the princess from a terrible fate"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_thvva")
+autoplay = true
 
 [connection signal="pressed" from="Panel/Play" to="." method="_on_play_pressed"]

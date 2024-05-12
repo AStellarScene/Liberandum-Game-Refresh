@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ur8er6rpfufh"]
+[gd_scene load_steps=5 format=3 uid="uid://ur8er6rpfufh"]
 
 [ext_resource type="Script" path="res://scripts/Menu.gd" id="1_kgopg"]
 [ext_resource type="Texture2D" uid="uid://cy32uetd1ykx4" path="res://sprites/start_menu_w_logo.png" id="2_ogajv"]
 [ext_resource type="FontFile" uid="uid://dqed0ibyd0ph" path="res://sprites/font/Perfect DOS VGA 437.ttf" id="3_rg8jk"]
+[ext_resource type="AudioStream" uid="uid://dmcwvah4d5ci4" path="res://music/main_menu_and_story.mp3" id="4_huch7"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_kgopg")
@@ -31,6 +32,10 @@ offset_bottom = 552.0
 theme_override_fonts/font = ExtResource("3_rg8jk")
 theme_override_font_sizes/font_size = 40
 text = "Done"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_huch7")
+autoplay = true
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
