@@ -32,10 +32,13 @@ func _physics_process(delta):
 
 func _on_hit_box_area_entered(area):
 	if area.is_in_group("potion"):
-		print(currentHealth)
-		currentHealth += 1
+		if currentHealth < 3:
+			currentHealth += 1
 		changedHealth.emit()
+		print(currentHealth)
 	if area.is_in_group("enemy"):
-		print(currentHealth)
-		currentHealth -= 1
+		
+		if currentHealth > 0:
+			currentHealth -= 1
 		changedHealth.emit()
+		print(currentHealth)

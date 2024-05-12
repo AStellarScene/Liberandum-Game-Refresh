@@ -23,7 +23,7 @@ func update():
 		heart_gui.show()
 		heart_gui_2.hide()
 		heart_gui_3.hide()
-	if player.currentHealth < 0:
+	if player.currentHealth <= 0:
 		heart_gui.hide()
 		heart_gui_2.hide()
 		heart_gui_3.hide()
